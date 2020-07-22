@@ -5,6 +5,7 @@ using namespace std;
 
 class HotelRoom
 {
+    friend istream& operator >>(istream&, HotelRoom&);         
     private:
         int room_num;
         int room_capacity;
@@ -104,6 +105,13 @@ void setdaily_rate(double rate1)
 void HotelRoom::print()
 {
 
+}
+
+istream& operator >>(istream& addroom, HotelRoom& room)
+{
+    cout<< "Please add room ";
+    addroom>> room.room_num;
+    return addroom;
 }
 
 #endif // ADDROOM_H_INCLUDED
