@@ -15,7 +15,7 @@ class HotelRoom
         HotelRoom();
         HotelRoom(int, int, int);
         HotelRoom (const HotelRoom &myroom);
-        HotlRoom& operator=(const HotelRoom &);
+        HotelRoom& operator=(const HotelRoom &);
         ~HotelRoom();
         int getroom_num();
         int getroom_capacity();
@@ -34,7 +34,7 @@ HotelRoom::HotelRoom()
 
 }
 
-~HotelRoom::HotelRoom()
+HotelRoom::~HotelRoom()
 {
 
 }
@@ -46,7 +46,7 @@ HotelRoom::HotelRoom(int r_num , int r_cap , int r_rate)
     daily_rate = r_rate;
 }
 
-HotelRoom (const HotelRoom &myroom)
+HotelRoom:: HotelRoom (const HotelRoom &myroom)
 {
     room_num = myroom.room_num;
     room_capacity = myroom.room_capacity;
@@ -54,7 +54,7 @@ HotelRoom (const HotelRoom &myroom)
     daily_rate = myroom.daily_rate;
 }
 
-HotlRoom& operator=(const HotelRoom &)
+HotelRoom& HotelRoom:: operator=(const HotelRoom &myroom)
 {
     room_num = myroom.room_num;
     room_capacity = myroom.room_capacity;
@@ -62,42 +62,42 @@ HotlRoom& operator=(const HotelRoom &)
     daily_rate = myroom.daily_rate;
 }
 
-int getroom_num()
+int HotelRoom:: getroom_num()
 {
     return room_num;
 }
 
-int getroom_capacity()
+int HotelRoom:: getroom_capacity()
 {
     return room_capacity;
 }
 
-int get_occupany()
+int HotelRoom:: get_occupany()
 {
     return occupancy;
 }
 
-double getdaily_rate()
+double HotelRoom:: getdaily_rate()
 {
     return daily_rate;
 }
 
-void setroom_num (int room1)
+void HotelRoom:: setroom_num (int room1)
 {
-    room_num = room_1;
+    room_num = room1;
 }
 
-void setroom_capacity(int capacity1)
+void HotelRoom:: setroom_capacity(int capacity1)
 {
     room_capacity = capacity1;
 }
 
-void set_occupancy(int occupancy1)
+void HotelRoom:: set_occupancy(int occupancy1)
 {
     occupancy = occupancy1;
 }
 
-void setdaily_rate(double rate1)
+void HotelRoom:: setdaily_rate(double rate1)
 {
     daily_rate = rate1;
 }
