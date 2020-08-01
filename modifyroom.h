@@ -25,3 +25,7 @@ class HotelRoom
         
         void print();
 };
+
+{
+    int room_num=room_num;
+    int Hotel_room
