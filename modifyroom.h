@@ -13,7 +13,8 @@ class HotelRoom
         HotelRoom(int, int, int);
         HotelRoom (const HotelRoom &myroom);
         HotelRoom& operator=(const HotelRoom &);
-        ~HotelRoom();
+        
+        HotelRoom();
         int getroom_num();
         int getroom_capacity();
         int get_occupany();
