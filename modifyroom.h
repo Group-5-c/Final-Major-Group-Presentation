@@ -12,9 +12,13 @@ class Hotelroom;
     
     public:
     Hotelroom();
-     int getroom_num();
-     int getroom_capacity(); 
-     int get_occupancy();
-     int get_status();
-     int get_rate();
-}
+    int getroom_num();
+    int getroom_capacity(); 
+    int get_occupancy();
+    int get_status();
+    int get_rate();
+    double getdaily_rate();
+    void setroom_num (int);
+    void setroom_capacity(int);
+    void set_occupancy(int);
+};
