@@ -8,6 +8,7 @@ void reserveRoom();
 void modifyRoom();
 void viewRoom();
 void Exit();
+void ViewRooms();
 
 int main()
 {
@@ -47,11 +48,9 @@ double r_rate;
             default:
                 cout<< "Incorrect option"<<endl;
         }
-    cout<< "ROOM \t\t"   <<"CAPACITY \t" <<"ROOM RATE:Peak-Season (Jan-Jul) \t" << "ROOM RATE: Non-Peak Season (Aug-Dec)" <<endl;
-    cout<< "Single \t\t" <<"One (1) \t"  << "$150 \t\t\t\t\t"  <<"$120" <<endl;
-    cout<< "Double \t\t" << "Two (2) \t" <<"$175 \t\t\t\t\t"   << "$150" <<endl;
-    cout<< "Family \t\t" << "Four (4) \t" << "$200 \t\t\t\t\t" << "$175" <<endl <<endl;
-
+      
+      ViewRooms(); //to view room options and rates
+    
         while (select == 1)
         {
             cout<< "Please select room type: \n 's' - single\n 'd' - double \n 'f' - family " <<endl <<endl;
@@ -68,7 +67,7 @@ double r_rate;
                 {
                      if (date == 'P' || date == 'p')
                     {
-                       r_rate = night*150;
+                       r_rate = night*150;          //calculate room rates per night
                     }
                     else if (date=='N' || date=='n')
                     {
@@ -154,4 +153,10 @@ void Exit()
 {
     cout << "Exit" <<endl;
 }
-
+void ViewRooms() 
+{
+    cout<< "ROOM \t\t"   <<"CAPACITY \t" <<"ROOM RATE:Peak-Season (Jan-Jul) \t" << "ROOM RATE: Non-Peak Season (Aug-Dec)" <<endl;
+    cout<< "Single \t\t" <<"One (1) \t"  << "$150 \t\t\t\t\t"  <<"$120" <<endl;
+    cout<< "Double \t\t" << "Two (2) \t" <<"$175 \t\t\t\t\t"   << "$150" <<endl;
+    cout<< "Family \t\t" << "Four (4) \t" << "$200 \t\t\t\t\t" << "$175" <<endl <<endl;
+}
