@@ -13,9 +13,9 @@ void ViewRooms();
 int main()
 {
 
-int select, night;
+int select, night, r_rate;
 char room, date;
-double r_rate;
+
     
   do
     {
