@@ -18,8 +18,7 @@ int main()
 
 int select, night, r_rate;
 char room, date;
-
-    
+   
   do
     {
     cout<< "Please select a menu option: " <<endl <<endl;
