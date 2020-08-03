@@ -1,4 +1,6 @@
 #include <iostream>
+#include "addroom.h"
+#include <string>
 using namespace std;
 
 int main()
@@ -53,27 +55,35 @@ do
             cin>> room;
             cout<< "Please enter the number of nights: " << endl;
             cin>> night;
-
-                if(room =='s')
+            
+            switch (room)
+             {
+                 case 's':
                 {
                     r_rate = night*150;
-                    cout<<"You selected single room and will be spending "<<night <<" night(s)" <<" at a cost of $" <<r_rate <<endl;
+                    cout<<"You sel  ected single room and will be spending "<<night <<" night(s)" <<" at a cost of $" <<r_rate <<endl<<endl;
+                    break;
                 }
-                else if (room =='d')
+
+                case'd':
                 {
                     r_rate = night*175;
-                    cout<<"You selected double room and will be spending "<<night <<" night(s)" <<" at a cost of $" <<r_rate<<endl;
+                    cout<<"You selected double room and will be spending "<<night <<" night(s)" <<" at a cost of $" <<r_rate<<endl <<endl;
+                    break;
                 }
-                else if (room =='f')
+                case 'f':
                 {
                     r_rate = night*200;
-                    cout<<"You have selected family which accomdates up to four(4) persons and will be spending "<<night <<" night(s)" <<" at a cost of $" <<r_rate <<endl;
+                    cout<<"You have selected family which accomdates up to four(4) persons and will be spending "<<night <<" night(s)" <<" at a cost of $" <<r_rate <<endl <<endl;
+                    break;
                 }
-                else
+                default:
                 {
                     cout<< "Incorrect input, please try again" <<endl;
+                    break;
                 }
-            cout<< "Thank you for selecting this room. You may continue and reserve this room" <<endl;
+
+                cout<< "Thank you for selecting this room. You may continue and reserve this room" <<endl;
             }
 
 } while (select != 5);
