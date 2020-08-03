@@ -1,3 +1,5 @@
+#ifndef RESERVEROOM_H_INCLUDED
+#define RESERVEROOM_H_INCLUDED
 #include<iostream>
 using namespace std;
 
@@ -55,3 +57,4 @@ while (select==1)
 	
 	return;
 }
+#endif 
