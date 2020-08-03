@@ -3,6 +3,12 @@
 #include <string>
 using namespace std;
 
+void addRoom();
+void reserveRoom();
+void modifyRoom();
+void viewRoom();
+void Exit();
+
 int main()
 {
 
@@ -10,8 +16,8 @@ int select, night;
 char room, date;
 double r_rate;
     
-do
-{
+  do
+    {
     cout<< "Please select a menu option: " <<endl <<endl;
     cout<< " MENU" <<endl;
     cout<< "1. Add Room \n";
@@ -24,19 +30,19 @@ do
         switch(select)
         {
             case 1:
-                cout<< "Please add room here \n" <<endl;
+                addRoom();
                 break;
             case 2:
-                cout<< "Reserve room here \n" <<endl;
+                reserveRoom();
                 break;
             case 3:
-                cout<< "You can modify room here \n" <<endl;
+                modifyRoom();
                 break;
             case 4:
-                cout<< "You can now view your room \n" <<endl;
+                viewRoom();
                 break;
             case 5:
-                cout << "Exit" <<endl;
+                Exit();
                 break;
             default:
                 cout<< "Incorrect option"<<endl;
@@ -64,7 +70,7 @@ do
                     {
                        r_rate = night*150;
                     }
-                    else if (date=='NP' || date=='np'|| date=='Np'|| date=='nP'|| date=='N' || date=='n')
+                    else if (date=='N' || date=='n')
                     {
                         r_rate = night*120;
                     }
@@ -83,7 +89,7 @@ do
                     {
                        r_rate = night*175;
                     }
-                    else if (date=='NP' || date=='np'|| date=='Np'|| date=='nP'|| date=='N' || date=='n')
+                    else if (date=='N' || date=='n')
                     {
                         r_rate = night*150;
                     }
@@ -101,7 +107,7 @@ do
                     {
                        r_rate = night*200;
                     }
-                    else if (date=='NP' || date=='np'|| date=='Np'|| date=='nP'|| date=='N' || date=='n')
+                    else if (date=='N' || date=='n')
                     {
                         r_rate = night*175;
                     }
@@ -122,8 +128,30 @@ do
             
         }
 
-} while (select != 5);
+    } while (select != 5);
 
     
     return 0;
 }
+
+void addRoom()
+{
+    cout<< "Please add room here \n" <<endl;
+}
+void reserveRoom()
+{
+    cout<< "Reserve room here \n" <<endl;
+}
+void  modifyRoom()
+{
+   cout<< "You can modify room here \n" <<endl; 
+}
+void viewRoom()
+{
+   cout<< "You can now view your room \n" <<endl; 
+}
+void Exit()
+{
+    cout << "Exit" <<endl;
+}
+
