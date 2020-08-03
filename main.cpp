@@ -6,8 +6,8 @@ using namespace std;
 int main()
 {
 
-int select , room, night;
-char s,d,f;
+int select, night;
+char room;
 double r_rate;
     
 do
@@ -50,7 +50,7 @@ do
 
 
         while (select == 1)
-            {
+        {
             cout<< "Please select room type: \n 's' - single\n 'd' - double \n 'f' - family " <<endl <<endl;
             cin>> room;
             cout<< "Please enter the number of nights: ";
@@ -86,7 +86,9 @@ do
                     break;
                 }
              
-            }
+             }
+            
+        }
 
 } while (select != 5);
 
