@@ -3,7 +3,7 @@
 #include<iostream>
 using namespace std;
 
-class HotelRoom
+class reserve_room
 {
 	char last_name[15];
 	char first_name[15];
