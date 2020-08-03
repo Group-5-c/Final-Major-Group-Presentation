@@ -40,7 +40,6 @@ do
                 break;
             default:
                 cout<< "Incorrect option"<<endl;
-                break;
         }
     cout<< "ROOM \t\t"   <<"CAPACITY \t" <<"ROOM RATE:Peak-Season (Feb-Jul) \t" << "ROOM RATE: Non-Peak Season (Aug-Dec)" <<endl;
     cout<< "Single \t\t" <<"One (1) \t"  << "$150 \t\t\t\t\t"  <<"$120" <<endl;
@@ -117,8 +116,7 @@ do
                 default:
                 {
                     cout<< "Incorrect input, please try again" <<endl;
-                    break;
-                }
+                 }
              
              }
             
