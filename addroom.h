@@ -60,6 +60,8 @@ HotelRoom& HotelRoom:: operator=(const HotelRoom &myroom)
     room_capacity = myroom.room_capacity;
     occupancy = myroom.occupancy;
     daily_rate = myroom.daily_rate;
+    
+    return myroom;
 }
 
 int HotelRoom:: getroom_num()
