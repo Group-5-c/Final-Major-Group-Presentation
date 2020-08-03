@@ -41,7 +41,7 @@ do
             default:
                 cout<< "Incorrect option"<<endl;
         }
-    cout<< "ROOM \t\t"   <<"CAPACITY \t" <<"ROOM RATE:Peak-Season (Feb-Jul) \t" << "ROOM RATE: Non-Peak Season (Aug-Dec)" <<endl;
+    cout<< "ROOM \t\t"   <<"CAPACITY \t" <<"ROOM RATE:Peak-Season (Jan-Jul) \t" << "ROOM RATE: Non-Peak Season (Aug-Dec)" <<endl;
     cout<< "Single \t\t" <<"One (1) \t"  << "$150 \t\t\t\t\t"  <<"$120" <<endl;
     cout<< "Double \t\t" << "Two (2) \t" <<"$175 \t\t\t\t\t"   << "$150" <<endl;
     cout<< "Family \t\t" << "Four (4) \t" << "$200 \t\t\t\t\t" << "$175" <<endl <<endl;
