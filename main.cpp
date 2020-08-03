@@ -51,9 +51,9 @@ do
 
         while (select == 1)
             {
-            cout<< "Please select room type: \n 's' - single\n 'd' - double \n 'f' - family " <<endl;
+            cout<< "Please select room type: \n 's' - single\n 'd' - double \n 'f' - family " <<endl <<endl;
             cin>> room;
-            cout<< "Please enter the number of nights: " << endl;
+            cout<< "Please enter the number of nights: ";
             cin>> night;
             
             switch (room)
@@ -61,20 +61,23 @@ do
                  case 's':
                 {
                     r_rate = night*150;
-                    cout<<"You sel  ected single room and will be spending "<<night <<" night(s)" <<" at a cost of $" <<r_rate <<endl<<endl;
+                    cout<<"You selected single room and will be spending "<<night <<" night(s)" <<" at a cost of $" <<r_rate <<endl;
+                    cout<< "Thank you for selecting this room. You may continue and reserve this room" <<endl <<endl;
                     break;
                 }
 
                 case'd':
                 {
                     r_rate = night*175;
-                    cout<<"You selected double room and will be spending "<<night <<" night(s)" <<" at a cost of $" <<r_rate<<endl <<endl;
+                    cout<<"You selected double room and will be spending "<<night <<" night(s)" <<" at a cost of $" <<r_rate <<endl;
+                    cout<< "Thank you for selecting this room. You may continue and reserve this room" <<endl <<endl;
                     break;
                 }
                 case 'f':
                 {
                     r_rate = night*200;
-                    cout<<"You have selected family which accomdates up to four(4) persons and will be spending "<<night <<" night(s)" <<" at a cost of $" <<r_rate <<endl <<endl;
+                    cout<<"You have selected family which accomdates up to four(4) persons and will be spending "<<night <<" night(s)" <<" at a cost of $" <<r_rate <<endl;
+                    cout<< "Thank you for selecting this room. You may continue and reserve this room" <<endl <<endl;
                     break;
                 }
                 default:
@@ -82,8 +85,7 @@ do
                     cout<< "Incorrect input, please try again" <<endl;
                     break;
                 }
-
-                cout<< "Thank you for selecting this room. You may continue and reserve this room" <<endl;
+             
             }
 
 } while (select != 5);
