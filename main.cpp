@@ -81,6 +81,9 @@ char room, date;
                         cout<< "Incorrect input" <<endl;
                     }
                     cout<<"You selected single room and will be spending "<<night <<" night(s)" <<" at a cost of $" <<r_rate <<endl;
+                    HotelRoom room_num;
+                    room_num.setroom_num(100);
+                    cout <<"Room number is: " <<room_num.getroom_num() <<endl;
                     cout<<"Thank you for selecting this room. You may continue and reserve this room" <<endl <<endl;
                     break;
                 }
@@ -100,7 +103,10 @@ char room, date;
                         cout<< "Incorrect input" <<endl;
                     }
                     cout<<"You selected double room and will be spending "<<night <<" night(s)" <<" at a cost of $" <<r_rate <<endl;
-                    cout<< "Thank you for selecting this room. You may continue and reserve this room" <<endl <<endl;
+                    HotelRoom room_num;
+                    room_num.setroom_num(200);
+                    cout <<"Room number is: " <<room_num.getroom_num() <<endl;
+                    cout<<"Thank you for selecting this room. You may continue and reserve this room" <<endl <<endl;
                     break;
                 }
                 case 'f':
@@ -118,7 +124,10 @@ char room, date;
                         cout<< "Incorrect input" <<endl;
                     }
                     cout<<"You have selected family which accomdates up to four(4) persons and will be spending "<<night <<" night(s)" <<" at a cost of $" <<r_rate <<endl;
-                    cout<< "Thank you for selecting this room. You may continue and reserve this room" <<endl <<endl;
+                    HotelRoom room_num;
+                    room_num.setroom_num(300);
+                    cout <<"Room number is: " <<room_num.getroom_num() <<endl;
+                    cout<<"Thank you for selecting this room. You may continue and reserve this room" <<endl <<endl;
                     break;
                 }
                 default:
@@ -158,8 +167,8 @@ void Exit()
 }
 void ViewRooms() 
 {
-    cout<< "ROOM \t\t"   <<"CAPACITY \t" <<"ROOM RATE:Peak-Season (Jan-Jul) \t" << "ROOM RATE: Non-Peak Season (Aug-Dec)" <<endl;
-    cout<< "Single \t\t" <<"One (1) \t"  << "$150 \t\t\t\t\t"  <<"$120" <<endl;
-    cout<< "Double \t\t" << "Two (2) \t" <<"$175 \t\t\t\t\t"   << "$150" <<endl;
-    cout<< "Family \t\t" << "Four (4) \t" << "$200 \t\t\t\t\t" << "$175" <<endl <<endl;
+    cout<< "ROOM No. \t" <<"ROOM TYPE \t"   <<"CAPACITY \t" <<"ROOM RATE:Peak(Jan-Jul) \t" << "ROOM RATE: Non-Peak (Aug-Dec)" <<endl;
+    cout<< "100 \t\t" <<"Single \t\t" <<"One (1) \t\t"  << "$150 \t\t\t\t"  <<"$120" <<endl;
+    cout<< "200 \t\t" <<"Double \t\t" << "Two (2) \t\t" <<"$175 \t\t\t\t"   << "$150" <<endl;
+    cout<< "300 \t\t" <<"Family \t\t" << "Four (4) \t\t" << "$200 \t\t\t\t" << "$175" <<endl <<endl;
 }
