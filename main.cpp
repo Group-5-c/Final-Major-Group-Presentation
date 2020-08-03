@@ -1,8 +1,5 @@
 #include <iostream>
 #include "addroom.h"
-#include "Reserve_room.h"
-#include "modifyroom.h"
-#inclde "viewroom.h"
 #include <string>
 using namespace std;
 
