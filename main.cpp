@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-void addRoom();
+void addRoom();                                                         //function prototypes for menu options
 void reserveRoom();
 void modifyRoom();
 void viewRoom();
@@ -18,7 +18,7 @@ char room, date;
    
   do
     {
-    cout<< "Please select a menu option: " <<endl <<endl;
+    cout<< "Please select a menu option: " <<endl <<endl;                  //Menu options for hotel
     cout<< " MENU" <<endl;
     cout<< "1. Add Room \n";
     cout<< "2. Reserve a Room \n";
@@ -27,7 +27,7 @@ char room, date;
     cout<< "5. Exit \n" <<endl;
     cin>> select;
 
-        switch(select)
+        switch(select)                                                     //switch statement to select menu options 
         {
             case 1:
                 addRoom();
@@ -48,11 +48,11 @@ char room, date;
                 cout<< "Incorrect option"<<endl;
         }
       
-      ViewRooms(); //to view room options and rates
+      ViewRooms();                                                      //to view room options and rates
     
         while (select == 1)
         {
-            cout<< "Please select room type: \n 's' - single\n 'd' - double \n 'f' - family " <<endl <<endl;
+            cout<< "Please select room type: \n 's' - single\n 'd' - double \n 'f' - family " <<endl <<endl;      //while menu option 1 is selected to add room
             cin>> room;
             cout<< "Please enter the number of nights: \t";
             cin>> night;
@@ -62,15 +62,15 @@ char room, date;
             
             switch (room)
              {
-                 case 's':
+                 case 's':                                                    //if client selects single room this will occur 
                 {
                      if (date == 'P' || date == 'p')
                     {
-                       r_rate = night*150;          //calculate room rates per night
+                       r_rate = night*150;                                    //calculate room rates per night for peak season
                     }
                     else if (date=='N' || date=='n')
                     {
-                        r_rate = night*120;
+                        r_rate = night*120;                                   //calculate room rates per night for non-peak season
                     }
                     else
                     {
@@ -78,13 +78,13 @@ char room, date;
                     }
                     cout<<"You selected single room and will be spending "<<night <<" night(s)" <<" at a cost of $" <<r_rate <<endl;
                     HotelRoom room_num;
-                    room_num.setroom_num(100);
+                    room_num.setroom_num(100);                                //room number output, set room number to 100
                     cout <<"Room number is: " <<room_num.getroom_num() <<endl;
                     cout<<"Thank you for selecting this room. You may continue and reserve this room" <<endl <<endl;
                     break;
                 }
 
-                case'd':
+                case'd':                                                   //if client selects double room this will occur 
                 {   
                     if (date == 'P' || date == 'p')
                     {
@@ -105,7 +105,7 @@ char room, date;
                     cout<<"Thank you for selecting this room. You may continue and reserve this room" <<endl <<endl;
                     break;
                 }
-                case 'f':
+                case 'f':                                   //if client selects family room this will occur 
                 {
                     if (date=='P' || date=='p')
                     {
@@ -141,9 +141,9 @@ char room, date;
     return 0;
 }
 
-void addRoom()
+void addRoom()                                                             //functions for menu options
 {
-    cout<< "Please add room here \n" <<endl;
+    cout<< "Please add room here \n" <<endl;                               
 }
 void reserveRoom()
 {
