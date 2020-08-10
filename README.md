@@ -2,7 +2,7 @@
 Course: Object Oriented Programming Using C++
 
 Group Members:
-Otilea Salmon - Add Room
+Otilea Salmon - Add Room and Main
 Joedash Shirley - Modify Room
 Kayla-Marie Sooman - Reserve Room
 
