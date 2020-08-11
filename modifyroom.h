@@ -1,48 +1,113 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-
-
- {
-	private:
-		int room_num;
-		int room_capacity;
-		int room_occupancy;
-		int room_status;
-		int room_rate;
-		
-	public:
-		Hotelroom();
-		int getroom_num();
-		int getroom_capacity();
-		int getroom_occupancy();
-		int getroom_status();
-		int getroom_rate();
-		
-	{
-		int_nonpeak=150
-		int_peak=175
-		
-	}
-
-
+class HotelRoom
 {
-	cout<< " MENU" <<endl;
-	cout<< "3. Modify a Room \n";
-	cin>> select;
-}
-	Press(select)
-	{
-		cout<<"Enter the number of guest to occupy room"<<endl;
-		guest_occupy();
-		break;
-		
-	}
+	private:
+        int room_num;
+        int room_capacity;
+        int occupancy;
+        double daily_rate;
+        public:
+        HotelRoom();
+        HotelRoom(int, int, int);
+        HotelRoom (const HotelRoom &myroom);
+        HotelRoom& operator=(const HotelRoom &);
+        ~HotelRoom();
+        int getroom_num();
+        int getroom_capacity();
+        int get_occupany();
+        double getdaily_rate();
+        void setroom_num (int);
+        void setroom_capacity(int);
+        void set_occupancy(int);
+        void setdaily_rate(double);
 
-while (select==1)
-	
-		cout<<"Your Room Has Been Reserved!"<<endl;
-		cout<<"Enjoy Your Stay!"<<endl;
-	
-	
-	return;
+        void print();
+};
+
+HotelRoom::HotelRoom()
+{
+
+}
+
+HotelRoom::~HotelRoom()
+{
+
+}
+
+HotelRoom::HotelRoom(int r_num , int r_cap , int r_rate)
+{
+    room_num = r_num;
+    room_capacity = r_cap;
+    daily_rate = r_rate;
+}
+
+HotelRoom:: HotelRoom (const HotelRoom &myroom)
+{
+    room_num =myroom.room_num;
+    room_capacity =myroom.room_capacity;
+    occupancy =myroom.occupancy;
+    daily_rate =myroom.daily_rate;
+}
+
+HotelRoom& HotelRoom:: operator=(const HotelRoom &myroom)
+{
+    room_num = myroom.room_num;
+    room_capacity = myroom.room_capacity;
+    occupancy = myroom.occupancy;
+    daily_rate = myroom.daily_rate;
+    
+    return *this;
+}
+
+int HotelRoom:: getroom_num()
+{
+    return room_num;
+}
+
+int HotelRoom:: getroom_capacity()
+{
+    return room_capacity;
+}
+
+int HotelRoom:: get_occupany()
+{
+    return occupancy;
+}
+
+double HotelRoom:: getdaily_rate()
+{
+    return daily_rate;
+}
+
+void HotelRoom:: setroom_num (int room1)
+{
+    room_num = room1;
+}
+
+void HotelRoom:: setroom_capacity(int capacity1)
+{
+    room_capacity = capacity1;
+}
+
+void HotelRoom:: set_occupancy(int occupancy1)
+{
+    occupancy = occupancy1;
+}
+
+void HotelRoom:: setdaily_rate(double rate1)
+{
+    daily_rate = rate1;
+}
+
+void HotelRoom::print()
+{
+
+}
+
+istream& operator >>(istream& modifyroom, HotelRoom& room)
+{
+    cout<<"Please modify room";
+    modifyroom>>room_num;
+    return modifyroom;
 }
